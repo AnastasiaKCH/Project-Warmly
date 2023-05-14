@@ -29,7 +29,7 @@ const Registerscreen = () => {
     const [cpasswordError, setCpasswordError] = useState("Это поле не может быть пустым");
 
     useEffect(() => {
-        if ((nameError || emailError || phoneError || passwordError || cpasswordError) && (password !== cpassword) && (captcha == false)) {
+        if ((nameError || emailError || phoneError || passwordError || cpasswordError) && (password !== cpassword) && (captcha === false)) {
             setVerified(false);
         } else {
             setVerified(true);

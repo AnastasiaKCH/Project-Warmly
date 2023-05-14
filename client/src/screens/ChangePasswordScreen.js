@@ -58,7 +58,7 @@ const ChangePasswordScreen = () => {
 
     async function sendLink(e) {
         e.preventDefault();
-        if (((emailError && passwordError && cpasswordError) == "") && (password == cpassword)) {
+        if (((emailError && passwordError && cpasswordError) === "") && (password === cpassword)) {
             try {
                 setloading(true);
                 const res = await axios.post("/api/users/createpassword", { password, email }).data;

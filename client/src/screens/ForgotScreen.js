@@ -26,7 +26,7 @@ const ForgotScreen = () => {
             setloading(true);
             const res = await axios.post("/api/users/sendpasswordlink", { email });
             const record = res.data;
-            if (record.statusText == "Unsuccess") {
+            if (record.statusText === "Unsuccess") {
                 setloading(false);
                 seterror(true);
                 setEmail("");

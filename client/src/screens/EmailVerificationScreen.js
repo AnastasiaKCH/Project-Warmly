@@ -27,7 +27,7 @@ const EmailVerificationScreen = () => {
             setloading(true);
             const result = await axios.post("/api/users/confirmcode", { number });
             const record = result.data;
-            if (record.statusText == "Unsuccess") {
+            if (record.statusText === "Unsuccess") {
                 setloading(false);
                 seterror(true);
             } else {

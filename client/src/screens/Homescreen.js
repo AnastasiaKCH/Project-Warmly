@@ -61,7 +61,7 @@ const Homescreen = () => {
       } else {
         availability = true;
       }
-      if (availability == true) {
+      if (availability === true) {
         temprooms.push(room);
       }
     }
